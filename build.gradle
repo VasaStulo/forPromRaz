@@ -1,5 +1,9 @@
 apply plugin: 'java'
 
+plugins {
+    jacoco
+}
+
 repositories {
     mavenCentral()
 }
