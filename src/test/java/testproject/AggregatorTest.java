@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.*;
 
 public class AggregatorTest {
 
+    
     @Test
     public void testInitialState() {
         Aggregator agr = new Aggregator();
@@ -26,5 +27,13 @@ public class AggregatorTest {
         agr.addValue(val);
         agr.addValue(val);
         assertThat(agr.getSum()).isEqualTo(val * 2);
+    }
+
+      @Test
+    public void testReset() {
+        Aggregator agr = new Aggregator();
+        double val = 1;
+        agr.reset();
+        assertThat(agr.getSum()).isEqualTo(0);
     }
 }
